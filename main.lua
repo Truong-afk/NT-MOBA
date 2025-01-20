@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://github.com/notpoiu/mspaint/releases/latest/download/Script.luau"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Truong-afk/NT-MOBA/refs/heads/main/ntmoba.txt"))()
