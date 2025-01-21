@@ -20,10 +20,6 @@ Fluent:Notify({
 })
 
 local Tabs = {
-    Main = Window:AddTab({ Title = "Universe", Icon = "" }),
-}
-
-local Tabs = {
     BloxFruits = Window:AddTab({ Title = "Scripts Blox Fruits", Icon = "" }),
 }
 
