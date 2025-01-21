@@ -12,37 +12,6 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl
 })
 
--- Tạo button icon nhỏ khi minimize
-local icon = Instance.new("ImageButton")
-icon.Name = "RestoreIcon"
-icon.Parent = game.Players.LocalPlayer.PlayerGui
-icon.Size = UDim2.new(0, 50, 0, 50) -- Kích thước
-icon.Position = UDim2.new(0.5, -25, 0.5, -25) -- Vị trí trên màn hình
-icon.BackgroundTransparency = 1
-icon.Image = "rbxassetid://122376714508463" -- Thay bằng ID asset của icon bạn muốn dùng
-icon.Visible = false -- Mặc định ẩn, chỉ hiện khi giao diện bị minimize
-
--- Khi nhấn phím để minimize
-local Minimized = false
-local function ToggleWindow()
-    Minimized = not Minimized
-    Window:SetVisible(not Minimized) -- Ẩn hoặc hiện giao diện chính
-    icon.Visible = Minimized -- Hiển thị hoặc ẩn icon
-end
-print("Icon đã được tạo và thêm vào PlayerGui")
-
--- Lắng nghe phím minimize
-game:GetService("UserInputService").InputBegan:Connect(function(input)
-    if input.KeyCode == Enum.KeyCode.LeftControl then -- Phím minimize
-        ToggleWindow()
-    end
-end)
-
--- Khi nhấn vào icon, giao diện khôi phục
-icon.MouseButton1Click:Connect(function()
-    ToggleWindow()
-end)
-
 Fluent:Notify({
     Title = "NT MOBA",
     Content = "Chào mấy ní!",
@@ -50,14 +19,12 @@ Fluent:Notify({
     Duration = 5
 })
 
--- Định nghĩa Tabs
 local Tabs = {
     BloxFruits = Window:AddTab({ Title = "Scripts Blox Fruits", Icon = "rbxassetid://122376714508463" }),
     YouTube = Window:AddTab({ Title = "Youtube Channel", Icon = "rbxassetid://122376714508463" }),
     Updates = Window:AddTab({ Title = "Update Information", Icon = "rbxassetid://122376714508463" }),
 }
 
--- Add Buttons vào tab Scripts Blox Fruits
 Tabs.BloxFruits:AddButton({
     Title = "QuantumOnyx",
     Description = "",
@@ -100,8 +67,6 @@ Tabs.BloxFruits:AddButton({
     end
 })
 
--- Add Section vào tab Youtube Channel
 Tabs.YouTube:AddSection("NT MOBA")
 
--- Add Section vào tab Update Information
 Tabs.Updates:AddSection("Tổng Hợp Nhiều Script Vip Pro Miễn Phí")
