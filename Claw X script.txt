@@ -4,77 +4,73 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "NT MOBA",
-    SubTitle = " |  Tổng Hợp Script Ver1",
+    SubTitle = " | Tổng Hợp Script Ver1",
     TabWidth = 160,
     Size = UDim2.fromOffset(480, 360),
-    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
+    Acrylic = false,
     Theme = "Dark",
-    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+    MinimizeKey = Enum.KeyCode.LeftControl
 })
 
 Fluent:Notify({
-        Title = "NT MOBA",
-        Content = "Chào mấy ní!",
-        SubContent = "loading...",
-        Duration = 5
+    Title = "NT MOBA",
+    Content = "Chào mấy ní!",
+    SubContent = "loading...",
+    Duration = 5
 })
 
+-- Định nghĩa Tabs
 local Tabs = {
     BloxFruits = Window:AddTab({ Title = "Scripts Blox Fruits", Icon = "rbxassetid://122376714508463" }),
+    YouTube = Window:AddTab({ Title = "Youtube Channel", Icon = "rbxassetid://122376714508463" }),
+    Updates = Window:AddTab({ Title = "Update Information", Icon = "rbxassetid://122376714508463" }),
 }
 
+-- Add Buttons vào tab Scripts Blox Fruits
 Tabs.BloxFruits:AddButton({
-        Title = "QuantumOnyx",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Trustmenotcondom/QTONYX/refs/heads/main/QuantumOnyx.lua"))()
-        end
+    Title = "QuantumOnyx",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Trustmenotcondom/QTONYX/refs/heads/main/QuantumOnyx.lua"))()
+    end
 })
 
 Tabs.BloxFruits:AddButton({
-        Title = "REDzHUB",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
-        end
+    Title = "REDzHUB",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+    end
 })
 
 Tabs.BloxFruits:AddButton({
-        Title = "W-azure",
-        Description = "",
-        Callback = function()
-            getgenv().FixCrash = false
-            getgenv().FixCrash2 = false
-            loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
-        end
+    Title = "W-azure",
+    Description = "",
+    Callback = function()
+        getgenv().FixCrash = false
+        getgenv().FixCrash2 = false
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+    end
 })
 
 Tabs.BloxFruits:AddButton({
-        Title = "Neva Hub",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
-        end
+    Title = "Neva Hub",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/VEZ2/NEVAHUB/main/2'))()
+    end
 })
 
 Tabs.BloxFruits:AddButton({
-        Title = "Fix Lag",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
-        end
+    Title = "Fix Lag",
+    Description = "",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
+    end
 })
 
-local Tabs = {
-    nt = Window:AddTab({ Title = "Youtube Channel", Icon = "rbxassetid://122376714508463" }),
-}
+-- Add Section vào tab Youtube Channel
+Tabs.YouTube:AddSection("NT MOBA")
 
-local Section = Tabs.nt:AddSection("NT MOBA")
-
-
-local Tabs = {
-    upin = Window:AddTab({ Title = "Update Information", Icon = "rbxassetid://122376714508463" }),
-}
-
-local Section = Tabs.upin:AddSection("Tổng Hợp Nhiều Script Vip Pro Miễn Phí")
-
+-- Add Section vào tab Update Information
+Tabs.Updates:AddSection("Tổng Hợp Nhiều Script Vip Pro Miễn Phí")
