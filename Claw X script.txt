@@ -66,15 +66,15 @@ Tabs.BloxFruits:AddButton({
 })
 
 local Tabs = {
-    Donate = Window:AddTab({ Title = "Youtube Channel", Icon = "" }),
+    nt = Window:AddTab({ Title = "Youtube Channel", Icon = "" }),
 }
 
-local Section = Tabs.Update:AddSection("NT MOBA")
+local Section = Tabs.nt:AddSection("NT MOBA")
 
 
 local Tabs = {
-    Update = Window:AddTab({ Title = "Update Information", Icon = "" }),
+    upin = Window:AddTab({ Title = "Update Information", Icon = "" }),
 }
 
-local Section = Tabs.Update:AddSection("Tổng Hợp Nhiều Script Vip Pro Miễn Phí")
+local Section = Tabs.upin:AddSection("Tổng Hợp Nhiều Script Vip Pro Miễn Phí")
 
