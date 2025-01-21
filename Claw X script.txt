@@ -82,7 +82,7 @@ Tabs.BloxFruits:AddButton({
 })
 
 local Tabs = {
-    Mm2 = Window:AddTab({ Title = "Murder Mystery 2", Icon = "" }),
+    Mm2 = Window:AddTab({ Title = "cc", Icon = "" }),
 }
 
 Tabs.Mm2:AddButton({
