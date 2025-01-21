@@ -17,7 +17,7 @@ local icon = Instance.new("ImageButton")
 icon.Name = "RestoreIcon"
 icon.Parent = game.Players.LocalPlayer.PlayerGui
 icon.Size = UDim2.new(0, 50, 0, 50) -- Kích thước
-icon.Position = UDim2.new(0, 10, 0, 10) -- Vị trí trên màn hình
+icon.Position = UDim2.new(0.5, -25, 0.5, -25) -- Vị trí trên màn hình
 icon.BackgroundTransparency = 1
 icon.Image = "rbxassetid://122376714508463" -- Thay bằng ID asset của icon bạn muốn dùng
 icon.Visible = false -- Mặc định ẩn, chỉ hiện khi giao diện bị minimize
@@ -29,6 +29,7 @@ local function ToggleWindow()
     Window:SetVisible(not Minimized) -- Ẩn hoặc hiện giao diện chính
     icon.Visible = Minimized -- Hiển thị hoặc ẩn icon
 end
+print("Icon đã được tạo và thêm vào PlayerGui")
 
 -- Lắng nghe phím minimize
 game:GetService("UserInputService").InputBegan:Connect(function(input)
