@@ -12,6 +12,36 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl
 })
 
+-- Tạo button icon nhỏ khi minimize
+local icon = Instance.new("ImageButton")
+icon.Name = "RestoreIcon"
+icon.Parent = game.Players.LocalPlayer.PlayerGui
+icon.Size = UDim2.new(0, 50, 0, 50) -- Kích thước
+icon.Position = UDim2.new(0, 10, 0, 10) -- Vị trí trên màn hình
+icon.BackgroundTransparency = 1
+icon.Image = "rbxassetid://122376714508463" -- Thay bằng ID asset của icon bạn muốn dùng
+icon.Visible = false -- Mặc định ẩn, chỉ hiện khi giao diện bị minimize
+
+-- Khi nhấn phím để minimize
+local Minimized = false
+local function ToggleWindow()
+    Minimized = not Minimized
+    Window:SetVisible(not Minimized) -- Ẩn hoặc hiện giao diện chính
+    icon.Visible = Minimized -- Hiển thị hoặc ẩn icon
+end
+
+-- Lắng nghe phím minimize
+game:GetService("UserInputService").InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.LeftControl then -- Phím minimize
+        ToggleWindow()
+    end
+end)
+
+-- Khi nhấn vào icon, giao diện khôi phục
+icon.MouseButton1Click:Connect(function()
+    ToggleWindow()
+end)
+
 Fluent:Notify({
     Title = "NT MOBA",
     Content = "Chào mấy ní!",
