@@ -8,7 +8,7 @@ local Window = Fluent:CreateWindow({
     TabWidth = 160,
     Size = UDim2.fromOffset(480, 360),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = "Dark",
+    Theme = "Midnight",
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 
@@ -20,7 +20,7 @@ Fluent:Notify({
 })
 
 local Tabs = {
-    BloxFruits = Window:AddTab({ Title = "Scripts Blox Fruits", Icon = "" }),
+    BloxFruits = Window:AddTab({ Title = "Scripts Blox Fruits", Icon = "rbxassetid://122376714508463" }),
 }
 
 Tabs.BloxFruits:AddButton({
@@ -66,14 +66,14 @@ Tabs.BloxFruits:AddButton({
 })
 
 local Tabs = {
-    nt = Window:AddTab({ Title = "Youtube Channel", Icon = "" }),
+    nt = Window:AddTab({ Title = "Youtube Channel", Icon = "rbxassetid://122376714508463" }),
 }
 
 local Section = Tabs.nt:AddSection("NT MOBA")
 
 
 local Tabs = {
-    upin = Window:AddTab({ Title = "Update Information", Icon = "" }),
+    upin = Window:AddTab({ Title = "Update Information", Icon = "rbxassetid://122376714508463" }),
 }
 
 local Section = Tabs.upin:AddSection("Tổng Hợp Nhiều Script Vip Pro Miễn Phí")
