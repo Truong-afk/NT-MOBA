@@ -1,6 +1,4 @@
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 -- Tạo cửa sổ chính
 local Window = Fluent:CreateWindow({
@@ -21,24 +19,24 @@ Fluent:Notify({
     Duration = 5
 })
 
--- Tạo chức năng thu gọn menu
+-- Chức năng thu gọn toàn bộ menu
 local isMinimized = false
 local menuIcon = Instance.new("ImageButton") -- Biểu tượng menu nhỏ gọn
 menuIcon.Image = "rbxassetid://1234567" -- Thay ID này bằng icon bạn muốn
 menuIcon.Size = UDim2.new(0, 50, 0, 50)
 menuIcon.Position = UDim2.new(0, 10, 0, 10) -- Vị trí trên màn hình
 menuIcon.BackgroundTransparency = 1
-menuIcon.Visible = false -- Ẩn đi khi chưa thu nhỏ
+menuIcon.Visible = false
 menuIcon.Parent = game.CoreGui
 
 Window:SetMinimizeCallback(function()
     isMinimized = not isMinimized
     if isMinimized then
-        Window.Instance.Visible = false -- Ẩn menu chính
-        menuIcon.Visible = true -- Hiện icon nhỏ
+        Window.Instance.Visible = false
+        menuIcon.Visible = true
     else
-        Window.Instance.Visible = true -- Hiện lại menu chính
-        menuIcon.Visible = false -- Ẩn icon nhỏ
+        Window.Instance.Visible = true
+        menuIcon.Visible = false
     end
 end)
 
@@ -49,11 +47,9 @@ menuIcon.MouseButton1Click:Connect(function()
 end)
 
 -- Tab Scripts Blox Fruits
-local Tabs = {
-    BloxFruits = Window:AddTab({ Title = "Scripts Blox Fruits", Icon = "rbxassetid://1234567" })
-}
+local BloxFruitsTab = Window:AddTab({ Title = "Scripts Blox Fruits", Icon = "rbxassetid://1234567" })
 
-Tabs.BloxFruits:AddButton({
+BloxFruitsTab:AddButton({
     Title = "QuantumOnyx",
     Description = "",
     Callback = function()
@@ -61,7 +57,7 @@ Tabs.BloxFruits:AddButton({
     end
 })
 
-Tabs.BloxFruits:AddButton({
+BloxFruitsTab:AddButton({
     Title = "REDzHUB",
     Description = "",
     Callback = function()
@@ -69,7 +65,7 @@ Tabs.BloxFruits:AddButton({
     end
 })
 
-Tabs.BloxFruits:AddButton({
+BloxFruitsTab:AddButton({
     Title = "Fix Lag",
     Description = "",
     Callback = function()
@@ -78,11 +74,9 @@ Tabs.BloxFruits:AddButton({
 })
 
 -- Tab Youtube Channel
-local Tabs = {
-    Youtube = Window:AddTab({ Title = "Youtube Channel", Icon = "rbxassetid://1234567" })
-}
+local YoutubeTab = Window:AddTab({ Title = "Youtube Channel", Icon = "rbxassetid://1234567" })
 
-Tabs.Youtube:AddButton({
+YoutubeTab:AddButton({
     Title = "NT MOBA Channel",
     Description = "",
     Callback = function()
@@ -91,10 +85,8 @@ Tabs.Youtube:AddButton({
 })
 
 -- Tab Update Information
-local Tabs = {
-    Update = Window:AddTab({ Title = "Update Information", Icon = "rbxassetid://1234567" })
-}
+local UpdateTab = Window:AddTab({ Title = "Update Information", Icon = "rbxassetid://1234567" })
 
-local Section = Tabs.Update:AddSection("Tổng Hợp Nhiều Script Vip Pro Miễn Phí")
+local UpdateSection = UpdateTab:AddSection("Tổng Hợp Nhiều Script Vip Pro Miễn Phí")
 
 -- Kết thúc script
