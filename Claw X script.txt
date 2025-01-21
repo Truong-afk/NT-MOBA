@@ -50,22 +50,6 @@ Tabs.BloxFruits:AddButton({
 })
 
 Tabs.BloxFruits:AddButton({
-        Title = "ThunderZ",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/ThundarZ/Welcome/main/Main/Loader/AllGame.lua"))()
-        end
-})
-
-Tabs.BloxFruits:AddButton({
-        Title = "HoHo Hub",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
-        end
-})
-
-Tabs.BloxFruits:AddButton({
         Title = "Neva Hub",
         Description = "",
         Callback = function()
@@ -82,109 +66,10 @@ Tabs.BloxFruits:AddButton({
 })
 
 local Tabs = {
-    Mm2 = Window:AddTab({ Title = "cc", Icon = "" }),
-}
-
-Tabs.Mm2:AddButton({
-        Title = "nt",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", false))()
-        end
-})
-
-Tabs.Mm2:AddButton({
-        Title = "Nexus",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/13B8B/NEXUS/main/loadstring'))()
-        end
-})
-
-Tabs.Mm2:AddButton({
-        Title = "SnapSanix",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/Roman34296589/SnapSanix-GUI-MM2/main/SnapSanix%20GUI%20mm2.lua'))()
-        end
-})
-
-Tabs.Mm2:AddButton({
-        Title = "Kidachi",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/MM2_V2"))()
-        end
-})
-
-local Tabs = {
-    Evade = Window:AddTab({ Title = "Evade", Icon = "" }),
-}
-
-Tabs.Evade:AddButton({
-        Title = "Tbao Hub",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubEvade"))()
-        end
-})
-
-local Tabs = {
-    Donate = Window:AddTab({ Title = "PLS Donate", Icon = "" }),
-}
-
-Tabs.Donate:AddButton({
-        Title = "Fake Donate",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet(("https://raw.githubusercontent.com/o5u3/PLS-Donate/main/Fake-Donate.lua")))()
-        end
-})
-
-local Tabs = {
-    Ball = Window:AddTab({ Title = "Blade Ball", Icon = "" }),
-}
-
-Tabs.Ball:AddButton({
-        Title = "REDzHUB",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BladeBall/main/redz9999"))()
-        end
-})
-
-Tabs.Ball:AddButton({
-        Title = "Soon...",
-        Description = "",
-        Callback = function()
-            print("Wait 1.3.5")
-        end
-})
-
-local Tabs = {
-    Pop = Window:AddTab({ Title = "Pop It", Icon = "" }),
-}
-
-Tabs.Pop:AddButton({
-        Title = "Pop It Scam",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet('https://pastebin.com/raw/dcyuEgyK'))()
-        end
-})
-
-
-local Tabs = {
     Donate = Window:AddTab({ Title = "Youtube Channel", Icon = "" }),
 }
 
-Tabs.Donate:AddButton({
-        Title = "Fake Donate",
-        Description = "",
-        Callback = function()
-            loadstring(game:HttpGet(("https://www.youtube.com/@ntmoba1265")))()
-        end
-})
+local Section = Tabs.Update:AddSection("NT MOBA")
 
 
 local Tabs = {
