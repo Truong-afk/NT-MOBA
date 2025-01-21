@@ -6,52 +6,16 @@ local Window = Fluent:CreateWindow({
     SubTitle = " | Tổng Hợp Script Ver1",
     TabWidth = 160,
     Size = UDim2.fromOffset(480, 360),
-    Acrylic = false, -- Không dùng hiệu ứng mờ
-    Theme = "Dark", -- Giao diện nền đen
-    MinimizeKey = Enum.KeyCode.LeftControl -- Phím thu gọn
+    Acrylic = false,
+    Theme = "Dark", -- Nền đen
+    MinimizeKey = Enum.KeyCode.LeftControl -- Phím thu nhỏ menu
 })
-
--- Thông báo khởi động
-Fluent:Notify({
-    Title = "NT MOBA",
-    Content = "Chào mấy ní!",
-    SubContent = "hihi",
-    Duration = 5
-})
-
--- Chức năng thu gọn toàn bộ menu
-local isMinimized = false
-local menuIcon = Instance.new("ImageButton") -- Biểu tượng menu nhỏ gọn
-menuIcon.Image = "rbxassetid://1234567" -- Thay ID này bằng icon bạn muốn
-menuIcon.Size = UDim2.new(0, 50, 0, 50)
-menuIcon.Position = UDim2.new(0, 10, 0, 10) -- Vị trí trên màn hình
-menuIcon.BackgroundTransparency = 1
-menuIcon.Visible = false
-menuIcon.Parent = game.CoreGui
-
-Window:SetMinimizeCallback(function()
-    isMinimized = not isMinimized
-    if isMinimized then
-        Window.Instance.Visible = false
-        menuIcon.Visible = true
-    else
-        Window.Instance.Visible = true
-        menuIcon.Visible = false
-    end
-end)
-
-menuIcon.MouseButton1Click:Connect(function()
-    isMinimized = false
-    Window.Instance.Visible = true
-    menuIcon.Visible = false
-end)
 
 -- Tab Scripts Blox Fruits
 local BloxFruitsTab = Window:AddTab({ Title = "Scripts Blox Fruits", Icon = "rbxassetid://1234567" })
 
 BloxFruitsTab:AddButton({
     Title = "QuantumOnyx",
-    Description = "",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Trustmenotcondom/QTONYX/refs/heads/main/QuantumOnyx.lua"))()
     end
@@ -59,7 +23,6 @@ BloxFruitsTab:AddButton({
 
 BloxFruitsTab:AddButton({
     Title = "REDzHUB",
-    Description = "",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
     end
@@ -67,7 +30,6 @@ BloxFruitsTab:AddButton({
 
 BloxFruitsTab:AddButton({
     Title = "Fix Lag",
-    Description = "",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
     end
@@ -78,15 +40,20 @@ local YoutubeTab = Window:AddTab({ Title = "Youtube Channel", Icon = "rbxassetid
 
 YoutubeTab:AddButton({
     Title = "NT MOBA Channel",
-    Description = "",
     Callback = function()
-        loadstring(game:HttpGet(("https://www.youtube.com/@ntmoba1265")))()
+        setclipboard("https://www.youtube.com/@ntmoba1265")
     end
 })
 
 -- Tab Update Information
 local UpdateTab = Window:AddTab({ Title = "Update Information", Icon = "rbxassetid://1234567" })
 
-local UpdateSection = UpdateTab:AddSection("Tổng Hợp Nhiều Script Vip Pro Miễn Phí")
+UpdateTab:AddSection("Tổng Hợp Nhiều Script Vip Pro Miễn Phí")
 
--- Kết thúc script
+-- Thông báo khởi động
+Fluent:Notify({
+    Title = "NT MOBA",
+    Content = "Chào mấy ní!",
+    SubContent = "hihi",
+    Duration = 5
+})
