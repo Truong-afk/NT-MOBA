@@ -15,7 +15,7 @@ local Window = Fluent:CreateWindow({
 Fluent:Notify({
         Title = "NT MOBA",
         Content = "Chào mấy ní!",
-        SubContent = "hihi",
+        SubContent = "loading...",
         Duration = 5
 })
 
